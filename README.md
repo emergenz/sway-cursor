@@ -3,12 +3,17 @@
 `sway-cursor` enables you to control the mouse cursor with your keyboard. `sway-cursor` internally uses the sway-native way of controlling the cursor. `sway-cursor` exists because configuring keyboard-driven mouse movement directly inside of your sway config leads to unsatisfying behaviour. Most importantly, there is no 'pointer acceleration' and no straightforward way of getting there via simple scripts. `sway-cursor` is a simple python daemon that simply lets you control the mouse cursor with your keyboard and behaves as you would expect: Pointer-acceleration is natively supported, holding two adjacent directions moves the cursor diagonally, and the cursor movement is *totally smooth*™.
 
 ## Installation
-Simply clone the repository, install the sole dependency, and run the script in the background (I recommend executing the script in your sway config for convenience).
+Simply clone the repository, install the sole dependency, and run the script in the background.
 
 ```bash
 git clone https://github.com/emergenz/sway-cursor
 pip3 install evdev
 python3 sway_cursor.py
+```
+
+I recommend executing the script at the end of your sway config for convenience:
+```
+exec_always --no-startup-id python3 <PATH_TO_THIS_REPO>/sway_cursor.py &
 ```
 ## Configuration
 The bindings are configured in the python script itself. Yes, this is not the default way of configuring bindings in sway, but after careful consideration, I decided that this was the lesser evil.
