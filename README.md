@@ -1,6 +1,7 @@
 # sway-cursor
 
 [![License](https://img.shields.io/github/license/emergenz/sway-cursor)](https://github.com/emergenz/sway-cursor/blob/main/LICENSE)
+
 `sway-cursor` enables you to control the mouse cursor with your keyboard. `sway-cursor` internally uses the sway-native way of controlling the cursor. `sway-cursor` exists because configuring keyboard-driven mouse movement directly inside of your sway config leads to unsatisfying behaviour. Most importantly, there is no 'pointer acceleration' and no straightforward way of getting there via simple scripts. `sway-cursor` is a simple python daemon that simply lets you control the mouse cursor with your keyboard and behaves as you would expect: Pointer-acceleration is natively supported, holding two adjacent directions moves the cursor diagonally, and the cursor movement is *totally smooth*™.
 
 ## Installation
