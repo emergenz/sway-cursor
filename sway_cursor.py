@@ -31,7 +31,7 @@ for dev in devices:
 keys = {code: False for code in list(KEY_MAP.keys()) + list(MOD_KEYS) + list(CTRL_KEYS)}
 
 # Acceleration parameters.
-base_speed = 5.0  # pixels per second
+base_speed = 1.0  # pixels per second
 accel = 5000.0  # pixels per second^2
 dt_loop = 0.01  # seconds per update
 
